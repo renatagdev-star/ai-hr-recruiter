@@ -1,0 +1,164 @@
+:root {
+  --color-bg: #faf7f2;
+  --color-card: #ffffff;
+  --color-accent: #d6a98a; /* boho nude */
+  --color-accent-2: #b58b72;
+  --color-text: #3a3a3a;
+  --color-subtext: #7b7b7b;
+
+  --radius: 16px;
+  --shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--color-bg);
+  font-family: "Inter", system-ui, sans-serif;
+  color: var(--color-text);
+  line-height: 1.6;
+  font-size: 17px;
+}
+
+a {
+  color: var(--color-accent-2);
+  text-decoration: none;
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  background: #ffffffcc;
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid #eee;
+  padding: 16px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.app-logo {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--color-accent-2);
+}
+
+.app-nav a {
+  padding: 8px 16px;
+  border-radius: var(--radius);
+  font-size: 16px;
+}
+
+.app-nav a.active-link {
+  background: var(--color-accent);
+  color: white;
+  box-shadow: var(--shadow);
+}
+
+.app-main {
+  flex: 1;
+  padding: 80px 24px 60px; /* top 80px */
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.page-title {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.page-subtitle {
+  font-size: 17px;
+  color: var(--color-subtext);
+  margin-bottom: 26px;
+}
+
+.card {
+  background: var(--color-card);
+  border-radius: var(--radius);
+  padding: 26px 26px;
+  box-shadow: var(--shadow);
+  border: 1px solid #f0eae4;
+  margin-bottom: 24px;
+
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+
+  min-height: 380px; /* više prostora u kartici */
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--color-accent-2);
+  margin-bottom: 12px;
+}
+
+input[type="file"],
+textarea,
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  padding: 13px; /* ispravka: px */
+  border-radius: var(--radius);
+  border: 1px solid #dccfc2;
+  background: #fffdfa;
+  font-size: 16px;
+  color: var(--color-text);
+  box-sizing: border-box;
+}
+
+textarea {
+  min-height: 260px;  /* veće polje za opis */
+  resize: vertical;
+}
+
+.button-primary {
+  padding: 14px 24px;
+  font-size: 17px;
+  background: linear-gradient(135deg, var(--color-accent), var(--color-accent-2));
+  color: white;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  margin-top: 10px;
+}
+
+.button-primary:hover {
+  opacity: 0.9;
+}
+
+.status-pill {
+  display: inline-block;
+  padding: 6px 14px;
+  font-size: 14px;
+  border-radius: var(--radius);
+  background: #f2e8df;
+  color: var(--color-accent-2);
+  font-weight: 600;
+}
+
+/* Admin table */
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.admin-table th,
+.admin-table td {
+  padding: 12px 10px;
+  border-bottom: 1px solid #eee;
+  font-size: 15px;
+}
+
+.admin-table th {
+  color: var(--color-subtext);
+  font-weight: 500;
+}
